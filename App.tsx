@@ -34,15 +34,16 @@ const PublicNavbar: React.FC<{ onLogin: () => void }> = ({ onLogin }) => {
             alt="SolRigs"
             className="h-14 w-auto object-contain bg-white/10 rounded-lg p-1 backdrop-blur-sm border border-white/5"
             onError={(e) => {
-              // Fallback just in case user placed it in root by mistake, or show text
+              // Fallback just in case user placed it in the root or public folder
               const target = e.target as HTMLImageElement;
-              if (target.src.includes('public/')) {
-                target.src = 'mainlogo1.png'; // Try root fallback
+              if (!target.src.includes('public/')) { // Prevent infinite loop if logic fails
+                target.src = '/mainlogo1.png'; // Try root relative
               } else {
-                target.style.display = 'none';
+                target.style.display = 'none'; // Hide if completely broken
               }
             }}
           />
+          <span className="hidden md:block text-2xl font-black text-white tracking-widest uppercase">SolRigs Inc.</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -159,18 +160,21 @@ const AppContent: React.FC = () => {
           <div className="p-6">
             <div className="mb-8">
               {/* LOGO UPDATE: Pointing directly to the public folder */}
-              <img
-                src="public/mainlogo1.png"
-                alt="SolRigs"
-                className="h-20 w-auto object-contain mb-2 bg-white/10 rounded-lg p-2"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  if (target.src.includes('public/')) {
-                    target.src = 'mainlogo1.png';
-                  }
-                }}
-              />
-              <p className="text-xs text-[#D4AF37] font-medium tracking-widest uppercase pl-2">Portal Access</p>
+              <div className="flex items-center gap-3 mb-2">
+                <img
+                  src="public/mainlogo1.png"
+                  alt="SolRigs"
+                  className="h-14 w-auto object-contain bg-white/10 rounded-lg p-1"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    if (target.src.includes('public/')) {
+                      target.src = '/mainlogo1.png';
+                    }
+                  }}
+                />
+                <span className="text-xl font-black text-white tracking-widest uppercase">SolRigs</span>
+              </div>
+              <p className="text-xs text-[#D4AF37] font-medium tracking-widest uppercase pl-1">Portal Access</p>
             </div>
 
             <nav className="space-y-1 mb-8 overflow-y-auto max-h-[60vh] scrollbar-none">

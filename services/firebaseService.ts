@@ -1,10 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { 
-  getFirestore, 
-  collection, 
-  addDoc, 
-  getDocs, 
-  query, 
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  query,
   where,
   serverTimestamp,
   orderBy,
@@ -19,12 +19,12 @@ import {
  * 3. Replace the config below with the new keys
  */
 const firebaseConfig = {
-  apiKey: "AIzaSyCIjeCoDH0G6qbK70gxgRY9OjRqnX-XrSw",
-  authDomain: "golden-cove-450322-g7.firebaseapp.com",
-  projectId: "golden-cove-450322-g7",
-  storageBucket: "golden-cove-450322-g7.firebasestorage.app",
-  messagingSenderId: "597599823330",
-  appId: "1:597599823330:web:365db7ce25632c672645bb",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: "G-L6KVMK74TH"
 };
 
@@ -81,7 +81,7 @@ export const firebaseService = {
       querySnapshot.forEach((doc) => {
         metrics.push(doc.data() as RWAMetrics);
       });
-      
+
       // Fallback to demo data if collection is empty
       return metrics.length > 0 ? metrics : [
         { rig_id: 'RIG-001', location: 'Permian Basin', status: 'Active', kWh_produced_24h: 142.4, monthly_yield_percent: 31.8, last_updated: new Date() },
