@@ -1,0 +1,71 @@
+{
+  "status": "success",
+  "result": [
+    {
+      "projectId": "aiaxos-project-hub",
+      "projectNumber": "911802805262",
+      "displayName": "Ainx",
+      "name": "projects/aiaxos-project-hub",
+      "resources": {
+        "hostingSite": "aiaxos-project-hub"
+      },
+      "state": "ACTIVE",
+      "etag": "1_aff6db76-4c5e-47e7-8066-ba62b08b41e4"
+    },
+    {
+      "projectId": "gen-lang-client-0686783756",
+      "projectNumber": "942449514075",
+      "displayName": "SPS-OSX",
+      "name": "projects/gen-lang-client-0686783756",
+      "resources": {
+        "hostingSite": "gen-lang-client-0686783756"
+      },
+      "state": "ACTIVE",
+      "etag": "1_05b0b25f-f7bf-4320-98ed-7e77daae733a"
+    },
+    {
+      "projectId": "golden-cove-450322-g7",
+      "projectNumber": "597599823330",
+      "displayName": "dojo-dashboard",
+      "name": "projects/golden-cove-450322-g7",
+      "resources": {
+        "hostingSite": "golden-cove-450322-g7"
+      },
+      "state": "ACTIVE",
+      "etag": "1_b64b1f69-4e38-4532-b1b2-bb5b3e0d5145"
+    },
+    {
+      "projectId": "profitwise-ai",
+      "projectNumber": "724260726362",
+      "displayName": "TG-ainx-CRE",
+      "name": "projects/profitwise-ai",
+      "resources": {
+        "hostingSite": "profitwise-ai"
+      },
+      "state": "ACTIVE",
+      "etag": "1_45b994df-0d48-47c3-b0d7-43e2a54309ec"
+    },
+    {
+      "projectId": "sps-leadscleandb",
+      "projectNumber": "1076485974016",
+      "displayName": "SPS-LeadsCleanDB",
+      "name": "projects/sps-leadscleandb",
+      "resources": {
+        "hostingSite": "sps-leadscleandb"
+      },
+      "state": "ACTIVE",
+      "etag": "1_4ade37e2-6e0d-4dbd-a81e-abfa26b7f8c7"
+    },
+    {
+      "projectId": "sunpeach-os-lite",
+      "projectNumber": "791075042221",
+      "displayName": "Finainx",
+      "name": "projects/sunpeach-os-lite",
+      "resources": {
+        "hostingSite": "sunpeach-os-lite"
+      },
+      "state": "ACTIVE",
+      "etag": "1_ced308cb-b7ec-48ed-bd68-8ab4f13be6df"
+    }
+  ]
+}

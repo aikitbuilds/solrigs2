@@ -1,0 +1,7 @@
+{
+  "name": "SolRigs Inc. - Master Ecosystem",
+  "description": "An integrated master dashboard for SolRigs Inc., the Snowdrop Mission, and the RigBuild AI Mentor system for strategic solar infrastructure execution.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

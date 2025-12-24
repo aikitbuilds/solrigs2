@@ -1,0 +1,9 @@
+
+--- IMAGE UPLOAD INSTRUCTIONS ---
+
+1. This is the "public" folder.
+2. Drag and drop your images here.
+3. Required file for logo: 'mainlogo1.png'
+4. Optional files for background: 'hero-solar.jpg', 'hero-tech.jpg'
+
+Once uploaded, the app will automatically find them at 'public/mainlogo1.png'.
